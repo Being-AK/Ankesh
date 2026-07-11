@@ -3,13 +3,11 @@
   publish = "dist"
   functions = "netlify/functions"
 
-# Expose Netlify Functions and bypass SPA routing
 [[redirects]]
-  from = "/.netlify/functions/*"
+  from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
 
-# Catch-all redirect for Single Page Application (SPA) routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
