@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Fix for "Cannot set property fetch of #<Window> which has only a getter" error in some browser/iframe environments
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var currentFetch = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return currentFetch;
+            },
+            set: function(val) {
+              currentFetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          console.warn("Could not patch window.fetch:", e);
+        }
+      })();
+    </script>
+    <title>Ankesh Kumar | Chartered Accountant (CA Finalist) & Compliance Specialist</title>
+    <meta name="description" content="Professional portfolio of Ankesh Kumar, a Chartered Accountant (CA Finalist) & Article Assistant. Features a Privacy-First AI Compliance Assistant, secure browser-based Professional PDF Toolkit, and Indian statutory tax utilities." />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ankeshkumar.in" />
+    <meta property="og:title" content="Ankesh Kumar | Chartered Accountant (CA Finalist) & Compliance Specialist" />
+    <meta property="og:description" content="Explore Ankesh Kumar's portfolio: CA Finalist, Tax & Audit specialist. Includes a secure, local browser-based PDF Toolkit and an AI Compliance Assistant." />
+    <meta property="og:image" content="https://i.postimg.cc/LXJD8Xrg/Portfolio.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ankeshkumar.in" />
+    <meta property="twitter:title" content="Ankesh Kumar | Chartered Accountant (CA Finalist) & Compliance Specialist" />
+    <meta property="twitter:description" content="Explore Ankesh Kumar's portfolio: CA Finalist, Tax & Audit specialist. Includes a secure, local browser-based PDF Toolkit and an AI Compliance Assistant." />
+    <meta property="twitter:image" content="https://i.postimg.cc/LXJD8Xrg/Portfolio.png" />
+
+    <!-- Robots and Canonical -->
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ankeshkumar.in" />
+
+    <!-- JSON-LD Structured Data (Person/Professional schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ankesh Kumar",
+      "jobTitle": "Chartered Accountant (CA Finalist) & Audit Specialist",
+      "alumniOf": "The Institute of Chartered Accountants of India (ICAI)",
+      "worksFor": {
+        "@type": "AccountingService",
+        "name": "GPHK & Associates"
+      },
+      "url": "https://ankeshkumar.in",
+      "sameAs": [
+        "https://linkedin.com/in/ankeshkumar9949"
+      ],
+      "knowsAbout": [
+        "Statutory Audit",
+        "Taxation",
+        "GST Compliance",
+        "ROC Compliance",
+        "Company Law",
+        "Transfer Pricing"
+      ]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              navy: '#0f172a',    // Slate 900 (Primary Text Light Mode)
+              corporate: '#1e3a8a', // Blue 900 (Buttons/Accents)
+              gold: '#d97706',      // Amber 600
+              goldLight: '#f59e0b', // Amber 500
+              light: '#f8fafc',     // Slate 50 (Bg Light Mode)
+              white: '#ffffff',
+              // Dark Mode Specifics
+              darkBg: '#020617',    // Slate 950
+              darkCard: '#1e293b',  // Slate 800
+              darkText: '#f1f5f9',  // Slate 100
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.6s ease-out forwards',
+              'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'marquee': 'marquee 40s linear infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'float-delayed': 'float 6s ease-in-out 3s infinite',
+              'wiggle': 'wiggle 1s ease-in-out infinite',
+              'bounce-gentle': 'bounceGentle 2s infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              marquee: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-3deg)' },
+                '50%': { transform: 'rotate(3deg)' },
+              },
+              bounceGentle: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            },
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #f1f5f9; }
+      ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+      
+      /* Dark mode scrollbar */
+      .dark ::-webkit-scrollbar-track { background: #0f172a; }
+      .dark ::-webkit-scrollbar-thumb { background: #475569; }
+    </style>
+    <!-- MediaPipe Hands script loaded dynamically inside HandGestureExperience -->
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.469.0?deps=react@19.0.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "three": "https://esm.sh/three@0.160.0"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

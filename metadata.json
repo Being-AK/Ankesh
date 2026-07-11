@@ -1,0 +1,10 @@
+{
+  "name": "Ankesh Kumar | CA Portfolio",
+  "description": "Professional portfolio for Ankesh Kumar, CA Article at GPHK & Associates, featuring an AI assistant.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,398 @@
+/* Global stylesheet adjustments */
+
+/* PDF Workspace Desktop Mode Adjustments */
+@media (min-width: 768px) {
+  /* Offset the tool dialog container so it leaves room on the left for the persistent sidebar */
+  .pdf-workspace-active .fixed.inset-0.z-50 {
+    left: var(--pdf-sidebar-width, 256px) !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* ==========================================================================
+   Print Stylesheet for Portfolio Resume
+   ========================================================================== */
+
+@media print {
+  /* 1. Page Configuration & Layout resets */
+  @page {
+    size: A4;
+    margin: 1.5cm 1.5cm 1.5cm 1.5cm;
+  }
+
+  /* Reset default colors, backgrounds, and scrollbars */
+  html, body {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  #root, main {
+    background: transparent !important;
+    color: #000000 !important;
+  }
+
+  /* Force show all professional portfolio sections, overriding display styles */
+  #home,
+  #about,
+  #why-choose-me,
+  #experience,
+  #process,
+  #services,
+  #skills,
+  #contact {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    border: none !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* 2. Global Hiding Rules (Hide all interactive/non-print components) */
+  header,
+  nav,
+  footer,
+  #chat-launcher-btn,
+  #virtual-portfolio-guide,
+  #testimonials, /* Hide testimonials on paper */
+  [class*="ChatWidget"],
+  [class*="chat-widget"],
+  button,
+  form,
+  input,
+  textarea,
+  select,
+  iframe,
+  .no-print,
+  .particles-container,
+  .cursor-trail,
+  [class*="particles"],
+  [class*="Particles"],
+  /* Hide workspace elements and loader indicators */
+  [class*="pdf-toolkit"],
+  [class*="compliance-suite"],
+  [class*="compliance-hub"],
+  [class*="assistant"],
+  div[class*="sticky"],
+  [class*="WorkspaceLoading"],
+  div:has(.animate-spin),
+  .fixed,
+  /* Hide absolute decorative elements (blobs, glows, background patterns) */
+  .absolute[class*="blur-"],
+  .absolute[class*="-z-"],
+  svg.absolute {
+    display: none !important;
+  }
+
+  /* Remove all drop shadows, filter blurs, and background gradients */
+  *, *::before, *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* 3. Typography Adjustments for Contrast */
+  h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+    font-weight: bold !important;
+    page-break-after: avoid;
+    break-after: avoid;
+    margin-bottom: 0.5rem !important;
+  }
+
+  h1 { font-size: 26pt !important; }
+  h2 { font-size: 16pt !important; }
+  h3 { font-size: 14pt !important; }
+  h4 { font-size: 12pt !important; }
+
+  p, span, li, strong {
+    color: #1e293b !important; /* Dark charcoal for excellent readability */
+  }
+
+  strong {
+    font-weight: 700 !important;
+    color: #000000 !important;
+  }
+
+  /* 4. Section-Specific Refinements */
+
+  /* Hero Section */
+  #home {
+    border-bottom: 2px solid #e2e8f0 !important;
+    padding-bottom: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  #home .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  #home .flex-col {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 2rem !important;
+  }
+
+  #home .w-full.md\:w-3\/5 {
+    width: 72% !important;
+  }
+
+  #home .w-full.md\:w-2\/5 {
+    width: 25% !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+  }
+
+  #home img {
+    width: 130px !important;
+    height: 162px !important;
+    border-radius: 8px !important;
+    object-fit: cover !important;
+    border: 1px solid #cbd5e1 !important;
+  }
+
+  /* About Me Section */
+  #about {
+    border-bottom: 1px solid #f1f5f9 !important;
+  }
+
+  #about .flex-col {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 2rem !important;
+  }
+
+  #about .w-full {
+    width: 100% !important;
+  }
+
+  #about .md\:w-\[42\%\] {
+    width: 28% !important;
+    flex-shrink: 0 !important;
+  }
+
+  #about .md\:w-\[58\%\] {
+    width: 72% !important;
+  }
+
+  #about img {
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    border: 1px solid #cbd5e1 !important;
+  }
+
+  /* Core Competency Badges inside About */
+  #about-competencies .grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+
+  [id^="about-badge-"] {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 6px !important;
+    font-size: 9pt !important;
+    font-weight: 500 !important;
+    box-shadow: none !important;
+  }
+
+  [id^="about-badge-"] svg {
+    color: #000000 !important;
+  }
+
+  /* Statistics Cards */
+  #about .grid-cols-2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+  }
+
+  #about .grid-cols-2 > div {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-left: 4px solid #1e3a8a !important; /* Muted corporate blue bar */
+    padding: 0.75rem !important;
+    border-radius: 6px !important;
+  }
+
+  /* Why Choose Me / Strengths Section */
+  #why-choose-me .flex-col {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+
+  #why-choose-me .w-full.md\:w-1\/3 {
+    width: 100% !important;
+  }
+
+  #why-choose-me .w-full.md\:w-2\/3 {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+  }
+
+  #why-choose-me .grid > div {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 0.75rem !important;
+    border-radius: 8px !important;
+  }
+
+  /* Experience Section */
+  #experience .max-w-5xl {
+    max-width: 100% !important;
+  }
+
+  #experience .border-l-2 {
+    border-left: 2px solid #cbd5e1 !important;
+    padding-left: 1.5rem !important;
+    margin-left: 0.5rem !important;
+  }
+
+  /* Timeline dots */
+  #experience .absolute {
+    border-color: #cbd5e1 !important;
+    background-color: #000000 !important;
+  }
+
+  #experience [class*="bg-light"] {
+    background: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 1.25rem !important;
+    border-radius: 8px !important;
+  }
+
+  #experience .whitespace-nowrap {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #94a3b8 !important;
+    padding: 0.25rem 0.75rem !important;
+    font-size: 9pt !important;
+    font-weight: bold !important;
+  }
+
+  /* Audit workflow / Process timeline */
+  #process .grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+  }
+
+  #process .grid > div {
+    background: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 0.75rem !important;
+    border-radius: 6px !important;
+  }
+
+  /* Services / Expertise Cards */
+  #services .container > div:nth-child(2) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.25rem !important;
+  }
+
+  #services [class*="bg-white"] {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    padding: 1rem !important;
+    border-radius: 8px !important;
+  }
+
+  /* Skills Grid Section */
+  #skills .grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.5rem !important;
+    max-width: 100% !important;
+  }
+
+  #skills .grid > div {
+    border: 1px solid #e2e8f0 !important;
+    padding: 1rem !important;
+    border-radius: 8px !important;
+    background: #f8fafc !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  #skills [class*="bg-indigo-50"],
+  #skills [class*="bg-emerald-50"],
+  #skills [class*="bg-amber-50"],
+  #skills [class*="bg-rose-50"],
+  #skills [class*="bg-blue-50"],
+  #skills [class*="bg-orange-50"] {
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #000000 !important;
+  }
+
+  /* Contact Section */
+  #contact .bg-navy {
+    background: #f8fafc !important;
+    color: #000000 !important;
+    padding: 1.5rem !important;
+    box-shadow: none !important;
+    border: 1px solid #cbd5e1 !important;
+  }
+
+  #contact .text-white {
+    color: #000000 !important;
+  }
+
+  #contact .w-full.md\:w-1\/2 {
+    width: 100% !important;
+  }
+
+  #contact form,
+  #contact .min-h-\[420px\],
+  #contact .md\:w-1\/2:nth-child(2) {
+    display: none !important; /* Hide contact form completely */
+  }
+
+  #contact .text-slate-300 {
+    color: #334155 !important;
+  }
+
+  #contact .bg-white\/10 {
+    background: #f1f5f9 !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #000000 !important;
+  }
+
+  #contact a {
+    color: #1e3a8a !important;
+    text-decoration: underline !important;
+  }
+
+  #contact svg {
+    color: #000000 !important;
+  }
+}

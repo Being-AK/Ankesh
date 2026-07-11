@@ -1,0 +1,5 @@
+# Direct Netlify Functions routing to prevent SPA rewrite
+/.netlify/functions/*    /.netlify/functions/:splat    200
+
+# Catch-all rule for SPA routing
+/*    /index.html    200
