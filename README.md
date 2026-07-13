@@ -1,20 +1,108 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+
+# Ankesh Digital Workspace
+
+### Finance • Audit • Compliance • Client-Side Software Engineering
+
+A modern browser-based workspace combining Chartered Accountancy with Software Engineering to automate compliance workflows, PDF processing, GST reconciliation, taxation utilities, and AI-assisted financial analysis.
+
+![React](https://img.shields.io/badge/React-19-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![Vite](https://img.shields.io/badge/Vite-6-purple)
+![WebAssembly](https://img.shields.io/badge/WebAssembly-WASM-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+🌐 **Live Portfolio:** https://ankeshkumar.netlify.app
+
 </div>
 
-# Run and deploy your AI Studio app
+---
 
-This contains everything you need to run your app locally.
+# Overview
 
-View your app in AI Studio: https://ai.studio/apps/046199d9-e7a3-4e91-ae43-7d2e45e911b9
+Ankesh Digital Workspace is a browser-based finance platform designed to improve productivity for Chartered Accountants, Audit Professionals, Tax Consultants, and Finance Teams.
 
-## Run Locally
+Instead of uploading confidential documents to third-party websites, users can process files, perform compliance checks, and generate reports directly inside the browser.
 
-**Prerequisites:**  Node.js
+No financial documents are transmitted to external servers.
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+# Major Workspaces
+
+## PDF Toolkit
+
+Professional PDF processing completely inside the browser.
+
+Features include:
+
+- Merge PDF
+- Split PDF
+- Compress PDF
+- Rotate Pages
+- Delete Pages
+- Extract Pages
+- Protect PDF
+- Unlock PDF
+- OCR
+- PDF to Images
+- Images to PDF
+- Organize PDF
+- Redact PDF
+- Watermark PDF
+
+---
+
+## Compliance Workspace
+
+Professional utilities for Indian finance and compliance.
+
+Includes:
+
+- GST Reconciliation Workspace
+- GST Calculator
+- Income Tax Calculator
+- Salary Planner
+- GSTIN Verification
+- MCA Company Search
+- MCA Director Search
+- MSME Udyam Verification
+
+---
+
+## AI Compliance Workspace
+
+AI-powered financial assistant capable of helping with:
+
+- GST notice drafting
+- Income Tax assistance
+- Companies Act guidance
+- Compliance explanations
+- Financial analysis
+
+---
+
+# GST Reconciliation Workspace
+
+One of the flagship modules of the application.
+
+Features:
+
+- Purchase Register vs GSTR-2B matching
+- Eight reconciliation categories
+- Vendor summaries
+- Validation reports
+- Excel export
+- CSV export
+- PDF reports
+- Fully client-side processing
+
+---
+
+# Technology Stack
+
+Frontend
+
+- React
+- TypeScript
+- V
